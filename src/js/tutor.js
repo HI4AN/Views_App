@@ -1,132 +1,139 @@
-'use strict'            ВКЛЮЧЕНИЕ СТРОГОГО РЕЖИМА, ЧТОБЫ НЕ ЗАБЫВАЛ ЮЗАТЬ 
-                           ПРИСВОЕНИЕ ПЕРЕМЕННОЙ  
-                           ПРИМЕР: 
-                           НЕПРАВИЛЬНО let massage = 'Привет'   
-                                       console.log (massage)   
-                           ПРАВИЛЬНО   massage = 'Привет' 
-                                       console.log (massage) 
+//   <script src="/src/js/views_app.js"> </script>
+// 'use strict'            ВКЛЮЧЕНИЕ СТРОГОГО РЕЖИМА, ЧТОБЫ НЕ ЗАБЫВАЛ ЮЗАТЬ 
+//                            ПРИСВОЕНИЕ ПЕРЕМЕННОЙ  
+//                            ПРИМЕР: 
+//                            НЕПРАВИЛЬНО let massage = 'Привет'   
+//                                        console.log (massage)   
+//                            ПРАВИЛЬНО   massage = 'Привет' 
+//                                        console.log (massage) 
 
- ТИПЫ ДАННЫХ В JS--------------------------------------
-1.СТРОКА 2.ЧИСЛО 3.БУЛЕВОЕ ЗНАЧЕНИЕ 4.ОБЪЕКТ 5.МАССИВ 
-1. const string = 'строка'
-2. const number = 123
-3. boolean = true/false
-4. const obj = {
-    name: 'John',
-    age: 24,
-    maried: false
-};
-console.log(obj.name, obj.age); ПРОЩЕ ЗАПИСЫВАТЬ ЧЕРЕЗ ТОЧКУ
+//  ТИПЫ ДАННЫХ В JS--------------------------------------
+// 1.СТРОКА 2.ЧИСЛО 3.БУЛЕВОЕ ЗНАЧЕНИЕ 4.ОБЪЕКТ 5.МАССИВ 
+// 1. const string = 'строка'
+// 2. const number = 123
+// 3. boolean = true/false
+// 4. const obj = {
+//     name: 'John',
+//     age: 24,
+//     maried: false
+// };
+// console.log(obj.name, obj.age); ПРОЩЕ ЗАПИСЫВАТЬ ЧЕРЕЗ ТОЧКУ
 
-console.log(obj ['name'], obj['age']); НО МОЖНО И БЕЗОПАСНЕЕ ЧЕРЕЗ КВАДРАТ СКОБКИ 
+// console.log(obj ['name'], obj['age']); НО МОЖНО И БЕЗОПАСНЕЕ ЧЕРЕЗ КВАДРАТ СКОБКИ 
 
-5. const array = [123, {key: "value"}, 3, 'строка', 5]
+// 5. const array = [123, {key: "value"}, 3, 'строка', 5]
 
-let arr = [123, {key: "value"}, 3, 'строка', 5]
-console.log(arr[2]);
-ТИПЫ ПЕРЕМЕННЫХ----------------------------------------------
-const - ПОСТОЯННАЯ ПЕРЕМЕННАЯ 
-const name = 'Александ'
-const admin = name
-console.log (admin)
+// let arr = [123, {key: "value"}, 3, 'строка', 5]
+// console.log(arr[2]);
+// ТИПЫ ПЕРЕМЕННЫХ----------------------------------------------
+// const - ПОСТОЯННАЯ ПЕРЕМЕННАЯ 
+// const name = 'Александ'
+// const admin = name
+// console.log (admin)
 
-let - ИЗМЕНЯЕМАЯ ПЕРЕМЕННАЯ
-let massage = 'Привет'
-massage = 'Пока'
-console.log (massage)
+// let - ИЗМЕНЯЕМАЯ ПЕРЕМЕННАЯ
+// let massage = 'Привет'
+// massage = 'Пока'
+// console.log (massage)
 
-ЕЁ НЕЛЬЗЯ ПЕРЕОБРЕДЕЛИТЬ 
-const name = 'Александ'
-name= 'Петя'
-console.log (name)
-TypeError: Assignment to constant variable.
+// ЕЁ НЕЛЬЗЯ ПЕРЕОБРЕДЕЛИТЬ 
+// const name = 'Александ'
+// name= 'Петя'
+// console.log (name)
+// TypeError: Assignment to constant variable.
 
-var - ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ
+// var - ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ
   
 
 
-Интерполяция------------------------------------------------------------- 
-const category = 'toys'
+// Интерполяция------------------------------------------------------------- 
+// const category = 'toys'
 
-console.log('https://someurl.com/' + category + '/'+'4'); Старый способ оформления 
+// console.log('https://someurl.com/' + category + '/'+'4'); Старый способ оформления 
 
-console.log(`https://someurl.com/${category}/5`); Новый способ оформления 
-ОТВЕТ: https://someurl.com/toys/5
+// console.log(`https://someurl.com/${category}/5`); Новый способ оформления 
+// ОТВЕТ: https://someurl.com/toys/5
 
-const user ='Ivan'
-alert(`Привет, ${user}`) 
+// const user ='Ivan'
+// alert(`Привет, ${user}`) 
 
 
-Операторы---------------------------------------------------
-1)+ и -
-let incr = 10,
-    decr = 10;
-incr++; оператор инкримента т.е увеличение на единицу 10+1=11
-decr--; оператор декримента т.е. уменьтшение на единицу 10-1=9
-console.log(incr);
-console.log(decr);
-ответ:
-11
-9
+// Операторы---------------------------------------------------
+// 1)+ и -
+// let incr = 10,
+//     decr = 10;
+// incr++; оператор инкримента т.е увеличение на единицу 10+1=11
+// decr--; оператор декримента т.е. уменьтшение на единицу 10-1=9
+// console.log(incr);
+// console.log(decr);
+// ответ:
+// 11
+// 9
 
-Префиксная форма записи 
-++incr;
-++decr;
-Постфиксная форма записи 
-incr++;
-decr--;
+// Префиксная форма записи 
+// ++incr;
+// ++decr;
+// Постфиксная форма записи 
+// incr++;
+// decr--;
 
-2) = == ===
-= присваивание 
+// 2) = == ===
+// = присваивание 
 
-== равенство. Равно ли число 8 к 8 
-console.log(2*4 == 8); тут мы хотип узнать что 2*8 действительно равно 8 и если да то будет true
+// == равенство. Равно ли число 8 к 8 
+// console.log(2*4 == 8); тут мы хотип узнать что 2*8 действительно равно 8 и если да то будет true
 
-=== строгое равенство по типу (чтобы понять что конечный результат равен строго числу или строке)
-console.log(2*4 === 8); тут восьмерка это число  поэтому ответ будет true т.к. 8 это числовое значение 
-console.log(2*4 === '8'); тут восьмерка это строка  поэтому ответ будет false т.к. 8 это строка 
+// === строгое равенство по типу (чтобы понять что конечный результат равен строго числу или строке)
+// console.log(2*4 === 8); тут восьмерка это число  поэтому ответ будет true т.к. 8 это числовое значение 
+// console.log(2*4 === '8'); тут восьмерка это строка  поэтому ответ будет false т.к. 8 это строка 
 
-3) && ||
-&& И  Работает только тогда когда у нас 2 или более правдивых выражения 
-const isCheked = true,
-      isClosed = true;
-console.log(isCheked && isClosed ); два условия правдивы поэтому ответ будет true, 
-если второе условие будет isClosed = false то ответ будет false т.к. не выполнены условия   
+// 3) && ||
+// && И  Работает только тогда когда у нас 2 или более правдивых выражения 
+// const isCheked = true,
+//       isClosed = true;
+// console.log(isCheked && isClosed ); два условия правдивы поэтому ответ будет true, 
+// если второе условие будет isClosed = false то ответ будет false т.к. не выполнены условия   
 
-|| или  Работает только тогда когда у нас хоть 1 выражение правдиво  
-const isCheked = true,
-      isClosed = false;
-console.log(isCheked || isClosed ); первое условие правдиво поэтому ответ будет true, 
-если второе условие будет isClosed = false то ответ будет true т.к. выполнены условия
+// || или  Работает только тогда когда у нас хоть 1 выражение правдиво  
+// const isCheked = true,
+//       isClosed = false;
+// console.log(isCheked || isClosed ); первое условие правдиво поэтому ответ будет true, 
+// если второе условие будет isClosed = false то ответ будет true т.к. выполнены условия
 
-4) !
-! Оператор отрицания, если была правда то станет ложь и наоборот 
-const isCheked = false,
-      isClosed = false;
-console.log(isCheked || !isClosed );
-Ответ будет true т.к. есть отрицание что это ложь во втором значении !isClosed
+// 4) !
+// ! Оператор отрицания, если была правда то станет ложь и наоборот 
+// const isCheked = false,
+//       isClosed = false;
+// console.log(isCheked || !isClosed );
+// Ответ будет true т.к. есть отрицание что это ложь во втором значении !isClosed
 
-GIT----------------------------------------------------------------------
+// GIT----------------------------------------------------------------------
 
-git init Инициализация гита 
-git config --local user.name 'Kiril' Локальная регистрация пользователя 
-git config --local user.email @example@gmail.com Локальная регистрация имейла пользователя
-git config --global  user.name 'Kiril' Глобальная регистрация пользователя 
-git config --global  user.email @example@gmail.com Глобальная регистрация имейла пользователя
+// git init Инициализация гита 
+// git config --local user.name 'Kiril' Локальная регистрация пользователя 
+// git config --local user.email @example@gmail.com Локальная регистрация имейла пользователя
+// git config --global  user.name 'Kiril' Глобальная регистрация пользователя 
+// git config --global  user.email @example@gmail.com Глобальная регистрация имейла пользователя
 
-git status  Проверка статуса
-git add -A  Добавление всех файлов в отслеживание гита 
-git add css.css  Добавление одного файла в отслеживание гита 
-git commit -a -m"Описываешь какие изменения были выполнены"
-git log Проверка комиов гита что и когда и кем было сделано 
+// git status  Проверка статуса
+// git add -A  Добавление всех файлов в отслеживание гита 
+// git add css.css  Добавление одного файла в отслеживание гита 
+// git commit -a -m"Описываешь какие изменения были выполнены"
+// git log Проверка комиов гита что и когда и кем было сделано 
 
-git remote add origin https://github.com/HI4AN/gdfghd.git Это перется из самого гита (сайта)
-делается только тогда когда юзаем в первый раз 
-git push -u origin master пуш первый
-git push пуш
+// git remote add origin https://github.com/HI4AN/gdfghd.git Это перется из самого гита (сайта)
+// делается только тогда когда юзаем в первый раз 
+// git push -u origin master пуш первый
+// git push пуш
 
-git branch Узнать какой путь main или master
-git remote remove origin  Удаление гита (а конце писать либо master либо origin) ????????
+// git branch Узнать какой путь main или master
+// git remote remove origin  Удаление гита (а конце писать либо master либо origin) ????????
+
+// Команды терминала для модальных браузерных окон-----------------------------------------------------
+// prompt   
+// const number0fFilms = +prompt('Сколько фильмов вы уже посмотрели?', '')  '' нужен для того чтобы появилось окно для ввода 
+// + prompt плюс ставится потому что будем работать с числом 
+
 
 
 
