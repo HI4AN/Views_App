@@ -119,20 +119,34 @@
 
 
 
-let num = 12;
-let vozrast;
-switch (num) {
-  case num >= 0.1 && num <= 12:
-  console.log(vozrast = 'switch ребенок');
-  default: {
-    console.log('switch dada');
-  }
-};
+// let num = 3;
+// let vozrast;
+// switch (num) {
+//   case num >= 0.1 && num <= 12:
+//   console.log(vozrast = 'switch ребенок');
+//   default: {
+//     console.log('switch dada');
+//   }
+// };
 
-// const hambuger = 5;
-// const fries = 9;
-// if (hambuger && fries ){
-//     console.log('Я сыт!');
+
+
+// for (let i = 1; i <= 4; i++) {
+//   let row = '';
+//   for (let j = 1; j <= i; j++) {
+//     row += '*';
+//   }
+//   console.log(row);
 // }
-// console.log((hambuger && fries));
+
+for (let i = 1; i <= 4; i++) {
+  let row = '';
+  for (let j = 1; j <= i; j++) {
+    row += '*';
+  }
+  console.log(row);
+}
+  
+
+
 
